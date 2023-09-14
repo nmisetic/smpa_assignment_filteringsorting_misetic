@@ -24,9 +24,10 @@ View(housesales)
 # 1) The column "year" indicates the year. Filter to return only results from 2015. 
 # (note that because the column is numeric, you wouldn't use quotes as with text when setting your filter value)
 
+housesales %>%
+  dplyr::filter(year==2015)
 
-
-
+#Performed a filter function. Had to specify with dplyr because otherwise the function does not work
 
 # 2) Similar to the above question, filter results from 2010 onward, so 2010-2015.
 
