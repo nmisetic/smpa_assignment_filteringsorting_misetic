@@ -26,14 +26,12 @@ View(housesales)
 
 housesales %>%
   dplyr::filter(year==2015)
-
 #Performed a filter function. Had to specify with dplyr because otherwise the function does not work
 
 # 2) Similar to the above question, filter results from 2010 onward, so 2010-2015.
 
 housesales %>%
   dplyr::filter(year==2010:2015)
-
 #Performed a filter function, used a colon to have a range
 
 # 3) The "city" column contains the relevant city. Filter to return only results for Houston
@@ -41,15 +39,15 @@ housesales %>%
 
 housesales %>%
   dplyr::filter(city=='Houston')
-
 #Performed a filter function, use quotes due to using text instead of numbers
 
 # 4) Filter for only where the city is Houston as above, and now also filter for only 
 # the year 2010. The results should give you 12 records, one for each month in 2010 for Houston.
 
-
-
-
+housesales %>%
+  dplyr::filter(city=='Houston')%>%
+  dplyr::filter(year==2010)
+#Performed two filter functions consecutively, connecting them with pipes
 
 # 5) Build on what you've done above. Filter for only where the city is Houston as above, 
 # and the year is 2010. Now add a sort using arrange() to sort the results based on the number
