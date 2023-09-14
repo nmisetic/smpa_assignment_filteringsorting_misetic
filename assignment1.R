@@ -31,9 +31,10 @@ housesales %>%
 
 # 2) Similar to the above question, filter results from 2010 onward, so 2010-2015.
 
+housesales %>%
+  dplyr::filter(year==2010:2015)
 
-
-
+#Performed a filter function, used a colon to have a range
 
 # 3) The "city" column contains the relevant city. Filter to return only results for Houston
 # (note, remember R is case sensitive)
