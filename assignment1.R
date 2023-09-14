@@ -53,9 +53,11 @@ housesales %>%
 # and the year is 2010. Now add a sort using arrange() to sort the results based on the number
 # of home sales (the "sales" column) from most to least.
 
-
-
-
+housesales %>%
+  dplyr::filter(city=='Houston')%>%
+  dplyr::filter(year==2010)%>%
+  dplyr::arrange(desc(sales))
+#Used the Q4 code, added the arrange function, filtered the sales function by descending
 
 # 6) Piggyback on what you've done above. 
 # Do the same as #5, only this time instead of Houston return records for Dallas
