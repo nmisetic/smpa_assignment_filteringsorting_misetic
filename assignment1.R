@@ -62,9 +62,11 @@ housesales %>%
 # 6) Piggyback on what you've done above. 
 # Do the same as #5, only this time instead of Houston return records for Dallas
 
-
-
-
+housesales %>%
+  dplyr::filter(city=='Dallas')%>%
+  dplyr::filter(year==2010)%>%
+  dplyr::arrange(desc(sales))
+#Used the Q5 code, replaced Houston with Dallas
 
 # 7) Sometimes metrics like home sales have a seasonal quality to them, much like 
 # retail sales. There are times of year that are naturally more active, and others where
