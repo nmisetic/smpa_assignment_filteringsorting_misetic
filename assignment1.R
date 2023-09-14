@@ -102,3 +102,8 @@ housesales %>%
 # 10) Finally, using the Corpus Christi code from Question 9, instead of June
 # use the month of February (2) instead.
 
+housesales %>%
+  dplyr::filter(city=='Corpus Christi')%>%
+  dplyr::filter(month==2)%>%
+  dplyr::arrange(desc(sales))
+#Used the Q8 code, month 6 with month 2
